@@ -63,7 +63,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/head.jpg" class="js-avatar">
+			<img src="/null" class="js-avatar">
 		</a>
 		<hgroup>
 			<h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -75,7 +75,9 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
+				<li><a href="https://Never-0.gitee.io" target="_blank">技术笔记</a></li>
+			
+				<li><a href="/categories" target="_blank">Java</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
@@ -117,12 +119,6 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
       
-      <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
-        <img src="/img/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-      
-      
 <nav id="mobile-nav">
   	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
@@ -132,7 +128,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/">
-					<img src="/img/head.jpg" class="js-avatar">
+					<img src="/null" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -140,6 +136,8 @@
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -167,11 +165,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" rel="noopener">技术笔记</a></li>
+					<li style="width: 25%"><a href="https://Never-0.gitee.io" target="_blank" rel="noopener">技术笔记</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories">Java</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -190,7 +190,7 @@
             
 
   
-    <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-socket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -198,7 +198,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/05/16/My-New-Post/" target="_blank">My New Post</a>
+	  <a class="article-title" href="/2022/05/19/socket/" target="_blank">我的java博客</a>
   
     </h1>
   
@@ -206,8 +206,8 @@
 
   
   
-<a href="/2022/05/16/My-New-Post/" class="archive-article-date">
-        <time datetime="2022-05-15T18:34:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-16</time>
+<a href="/2022/05/19/socket/" class="archive-article-date">
+        <time datetime="2022-05-19T09:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-19</time>
 </a>
 
   
@@ -219,7 +219,54 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2>
+    <h1 id="socket通信使用"><a href="#socket通信使用" class="headerlink" title="socket通信使用"></a>socket通信使用</h1><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>例：</p>
+<p>1.建服务端socket<br>    //建一个服务 端口9998<br>        ServerSocket server= new ServerSocket(9998);<br>        System.err.println(“服务器启动”);<br>        //通过该方法获取客户的连接 没有连接就处于阻塞状态<br>        Socket socket = server.accept();<br>        System.out.println(“连接成功”);<br>        //通过io传过去一个hello<br>        OutputStream out = socket.getOutputStream();<br>        out.write(“hello”.getBytes());<br>        //获取客户端字符串world<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));<br>        //传文件<br>        File file=new File(“F:\download.zip”);<br>        InputStream inp = new FileInputStream(file);<br>        //字节限制  因此将其切片100<br>        byte [] bs=new byte[100];<br>        int len;<br>        //读取该文件 读取完该方法返回一个-1结束<br>        while ((len=inp.read(bs))!=-1) {<br>            out.write(bs);<br>        }<br>        //全部关闭<br>        inp.close();<br>        out.close();<br>        socket.close();<br>        server.close();<br>2.建客户端client<br>    Socket socket =new Socket(“127.0.0.1”,9998);<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));</p>
+<pre><code>OutputStream out = socket.getOutputStream();
+//out.write(&quot;world&quot;.getBytes());
+InputStream inp = socket.getInputStream();
+byte [] bs=new byte[100];
+int len;
+//将获取的文件存入aaa
+OutputStream out2 = new FileOutputStream(&quot;F:\\aaa.zip&quot;);
+while ((len=inp.read(bs))!=-1) {
+    out2.write(bs,0,len);
+}
+inp.close();
+out.close();
+out2.close();
+socket.close();</code></pre><p>使用多线程下载：<br>    1.建一个多线程类<br>public class Run implements Runnable{</p>
+<pre><code>private  Socket socket;
+//构造方法传入socket
+public Run(Socket socket) {
+    this.socket=socket;
+}
+@Override
+public void run() {
+    try {
+    System.out.println(&quot;连接成功&quot;);
+    //通过io传过去一个hello
+    OutputStream out;
+    out = socket.getOutputStream();
+
+    File file=new File(&quot;F:\\download.zip&quot;);
+    InputStream inp = new FileInputStream(file);
+    //字节限制  因此将其切片100
+    byte [] bs=new byte[100];
+    int len;
+    //读取该文件 读取完该方法返回一个-1结束
+    while ((len=inp.read(bs))!=-1) {
+        out.write(bs);
+    }
+    //全部关闭
+    inp.close();
+    out.close();
+    socket.close();
+    } catch (IOException e) {
+        // TODO 自动生成的 catch 块
+        e.printStackTrace();
+    }
+}</code></pre><p>}<br>2.将原先的服务端socket改为<br>    // TODO 自动生成的方法存根<br>            ServerSocket server= new ServerSocket(9998);<br>            while (true) {<br>                Socket socket=server.accept();<br>                //將socket传入run线程  在将线程放入thread中使用start方法<br>                new Thread(new Run(socket)).start();<br>            }</p>
+
     
 
     
@@ -231,10 +278,21 @@
     
     
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/05/16/My-New-Post/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/05/19/socket/">展开全文 >></a>
     </p>
     
 
@@ -602,16 +660,16 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title" title="记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析">
+              <a href="https://Never-0.github.io" target="_blank" class="search-title" title="记录工作和学习过程中的笔记">
                 
-                  <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
+                  <i class="icon-link icon"></i>
                 
                 技术笔记
               </a>
             </li>
           
             <li class="search-li">
-              <a href="https://github.com/JoeyBling" target="_blank" class="search-title" >
+              <a href="https://github.com" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -620,7 +678,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title" >
+              <a href="https://gitee.com" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -629,7 +687,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title" >
+              <a href="https://www.jianshu.com" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -638,7 +696,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title" >
+              <a href="https://blog.csdn.net" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -655,7 +713,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Java后端开发、聚合支付、<br>公众号开发、开源爱好者、Linux<br><br>联系QQ:2434387555<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="aboutme">介绍</div>
   	  	
     	</section>
     

@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的博客 | Hexo</title>
+  <title>我的java博客 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/index.html">
+  <meta name="description" content="socket通信使用使用步骤例： 1.建服务端socket    &#x2F;&#x2F;建一个服务 端口9998        ServerSocket server&#x3D; new ServerSocket(9998);        System.err.println(“服务器启动”);        &#x2F;&#x2F;通过该方法获取客户的连接 没有连接就处于阻塞状态        Socket socket &#x3D; server.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的java博客">
+<meta property="og:url" content="http://yoursite.com/2022/05/19/socket/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="socket通信使用使用步骤例： 1.建服务端socket    &#x2F;&#x2F;建一个服务 端口9998        ServerSocket server&#x3D; new ServerSocket(9998);        System.err.println(“服务器启动”);        &#x2F;&#x2F;通过该方法获取客户的连接 没有连接就处于阻塞状态        Socket socket &#x3D; server.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-23T15:17:49.000Z">
-<meta property="article:modified_time" content="2020-05-23T15:26:27.664Z">
+<meta property="article:published_time" content="2022-05-19T09:24:13.000Z">
+<meta property="article:modified_time" content="2022-05-26T19:04:56.057Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -185,14 +187,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-socket" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      我的博客
+      我的java博客
     </h1>
   
 
@@ -204,8 +206,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-        <time datetime="2020-05-23T15:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
+<a href="/2022/05/19/socket/" class="archive-article-date">
+        <time datetime="2022-05-19T09:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-19</time>
 </a>
 
   
@@ -218,7 +220,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">479字</span>
     </span>
   </span>
 
@@ -227,7 +229,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -238,7 +240,54 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h1 id="socket通信使用"><a href="#socket通信使用" class="headerlink" title="socket通信使用"></a>socket通信使用</h1><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>例：</p>
+<p>1.建服务端socket<br>    //建一个服务 端口9998<br>        ServerSocket server= new ServerSocket(9998);<br>        System.err.println(“服务器启动”);<br>        //通过该方法获取客户的连接 没有连接就处于阻塞状态<br>        Socket socket = server.accept();<br>        System.out.println(“连接成功”);<br>        //通过io传过去一个hello<br>        OutputStream out = socket.getOutputStream();<br>        out.write(“hello”.getBytes());<br>        //获取客户端字符串world<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));<br>        //传文件<br>        File file=new File(“F:\download.zip”);<br>        InputStream inp = new FileInputStream(file);<br>        //字节限制  因此将其切片100<br>        byte [] bs=new byte[100];<br>        int len;<br>        //读取该文件 读取完该方法返回一个-1结束<br>        while ((len=inp.read(bs))!=-1) {<br>            out.write(bs);<br>        }<br>        //全部关闭<br>        inp.close();<br>        out.close();<br>        socket.close();<br>        server.close();<br>2.建客户端client<br>    Socket socket =new Socket(“127.0.0.1”,9998);<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));</p>
+<pre><code>OutputStream out = socket.getOutputStream();
+//out.write(&quot;world&quot;.getBytes());
+InputStream inp = socket.getInputStream();
+byte [] bs=new byte[100];
+int len;
+//将获取的文件存入aaa
+OutputStream out2 = new FileOutputStream(&quot;F:\\aaa.zip&quot;);
+while ((len=inp.read(bs))!=-1) {
+    out2.write(bs,0,len);
+}
+inp.close();
+out.close();
+out2.close();
+socket.close();</code></pre><p>使用多线程下载：<br>    1.建一个多线程类<br>public class Run implements Runnable{</p>
+<pre><code>private  Socket socket;
+//构造方法传入socket
+public Run(Socket socket) {
+    this.socket=socket;
+}
+@Override
+public void run() {
+    try {
+    System.out.println(&quot;连接成功&quot;);
+    //通过io传过去一个hello
+    OutputStream out;
+    out = socket.getOutputStream();
+
+    File file=new File(&quot;F:\\download.zip&quot;);
+    InputStream inp = new FileInputStream(file);
+    //字节限制  因此将其切片100
+    byte [] bs=new byte[100];
+    int len;
+    //读取该文件 读取完该方法返回一个-1结束
+    while ((len=inp.read(bs))!=-1) {
+        out.write(bs);
+    }
+    //全部关闭
+    inp.close();
+    out.close();
+    socket.close();
+    } catch (IOException e) {
+        // TODO 自动生成的 catch 块
+        e.printStackTrace();
+    }
+}</code></pre><p>}<br>2.将原先的服务端socket改为<br>    // TODO 自动生成的方法存根<br>            ServerSocket server= new ServerSocket(9998);<br>            while (true) {<br>                Socket socket=server.accept();<br>                //將socket传入run线程  在将线程放入thread中使用start方法<br>                new Thread(new Run(socket)).start();<br>            }</p>
+
     
 
     
@@ -252,7 +301,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2020/05/23/我的博客/" title="我的博客" target="_blank">http://yoursite.com/2020/05/23/我的博客/</a>
+          <a href="http://yoursite.com/2022/05/19/socket/" title="我的java博客" target="_blank">http://yoursite.com/2022/05/19/socket/</a>
         </li>
         
         <li>
@@ -270,6 +319,17 @@
     
     
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
 
@@ -319,7 +379,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/05/19/socket/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -334,18 +394,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/05/19/socket/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的java博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/23/Java/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +423,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#socket通信使用"><span class="toc-number">1.</span> <span class="toc-text">socket通信使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用步骤"><span class="toc-number">1.1.</span> <span class="toc-text">使用步骤</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
