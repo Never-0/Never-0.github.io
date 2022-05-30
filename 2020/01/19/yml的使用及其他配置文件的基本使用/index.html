@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的java博客 | Hexo</title>
+  <title>yml的使用及其他配置文件的基本使用 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="socket通信使用使用步骤例： 1.建服务端socket    &#x2F;&#x2F;建一个服务 端口9998        ServerSocket server&#x3D; new ServerSocket(9998);        System.err.println(“服务器启动”);        &#x2F;&#x2F;通过该方法获取客户的连接 没有连接就处于阻塞状态        Socket socket &#x3D; server.">
+  <meta name="description" content="yml的使用及其他配置文件的基本使用yml一种比properties更简洁的标记语言，通过修改配置文件改springboot的配置  也可以存放数据 SpringBoot使用一个全局的配置文件,配置文件名是固定的如下 application.properties application.yml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的java博客">
-<meta property="og:url" content="http://yoursite.com/2022/05/19/socket/index.html">
+<meta property="og:title" content="yml的使用及其他配置文件的基本使用">
+<meta property="og:url" content="http://yoursite.com/2020/01/19/yml%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="socket通信使用使用步骤例： 1.建服务端socket    &#x2F;&#x2F;建一个服务 端口9998        ServerSocket server&#x3D; new ServerSocket(9998);        System.err.println(“服务器启动”);        &#x2F;&#x2F;通过该方法获取客户的连接 没有连接就处于阻塞状态        Socket socket &#x3D; server.">
+<meta property="og:description" content="yml的使用及其他配置文件的基本使用yml一种比properties更简洁的标记语言，通过修改配置文件改springboot的配置  也可以存放数据 SpringBoot使用一个全局的配置文件,配置文件名是固定的如下 application.properties application.yml">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-19T09:24:13.000Z">
-<meta property="article:modified_time" content="2022-05-27T18:13:52.209Z">
+<meta property="article:published_time" content="2020-01-19T09:24:13.000Z">
+<meta property="article:modified_time" content="2022-05-30T20:07:02.576Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="socket">
+<meta property="article:tag" content="Spring boot">
+<meta property="article:tag" content="yml">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -188,14 +189,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-socket" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-yml的使用及其他配置文件的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      我的java博客
+      yml的使用及其他配置文件的基本使用
     </h1>
   
 
@@ -207,8 +208,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/05/19/socket/" class="archive-article-date">
-        <time datetime="2022-05-19T09:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-19</time>
+<a href="/2020/01/19/yml%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2020-01-19T09:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
 </a>
 
   
@@ -221,7 +222,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">479字</span>
+      <span class="post-count">790字</span>
     </span>
   </span>
 
@@ -230,7 +231,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -241,53 +242,28 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="socket通信使用"><a href="#socket通信使用" class="headerlink" title="socket通信使用"></a>socket通信使用</h1><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>例：</p>
-<p>1.建服务端socket<br>    //建一个服务 端口9998<br>        ServerSocket server= new ServerSocket(9998);<br>        System.err.println(“服务器启动”);<br>        //通过该方法获取客户的连接 没有连接就处于阻塞状态<br>        Socket socket = server.accept();<br>        System.out.println(“连接成功”);<br>        //通过io传过去一个hello<br>        OutputStream out = socket.getOutputStream();<br>        out.write(“hello”.getBytes());<br>        //获取客户端字符串world<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));<br>        //传文件<br>        File file=new File(“F:\download.zip”);<br>        InputStream inp = new FileInputStream(file);<br>        //字节限制  因此将其切片100<br>        byte [] bs=new byte[100];<br>        int len;<br>        //读取该文件 读取完该方法返回一个-1结束<br>        while ((len=inp.read(bs))!=-1) {<br>            out.write(bs);<br>        }<br>        //全部关闭<br>        inp.close();<br>        out.close();<br>        socket.close();<br>        server.close();<br>2.建客户端client<br>    Socket socket =new Socket(“127.0.0.1”,9998);<br>//        InputStream inp = socket.getInputStream();<br>//        byte [] bs=new byte[100];<br>//        inp.read(bs);<br>//        System.out.println(new String(bs));</p>
-<pre><code>OutputStream out = socket.getOutputStream();
-//out.write(&quot;world&quot;.getBytes());
-InputStream inp = socket.getInputStream();
-byte [] bs=new byte[100];
-int len;
-//将获取的文件存入aaa
-OutputStream out2 = new FileOutputStream(&quot;F:\\aaa.zip&quot;);
-while ((len=inp.read(bs))!=-1) {
-    out2.write(bs,0,len);
-}
-inp.close();
-out.close();
-out2.close();
-socket.close();</code></pre><p>使用多线程下载：<br>    1.建一个多线程类<br>public class Run implements Runnable{</p>
-<pre><code>private  Socket socket;
-//构造方法传入socket
-public Run(Socket socket) {
-    this.socket=socket;
-}
-@Override
-public void run() {
-    try {
-    System.out.println(&quot;连接成功&quot;);
-    //通过io传过去一个hello
-    OutputStream out;
-    out = socket.getOutputStream();
-
-    File file=new File(&quot;F:\\download.zip&quot;);
-    InputStream inp = new FileInputStream(file);
-    //字节限制  因此将其切片100
-    byte [] bs=new byte[100];
-    int len;
-    //读取该文件 读取完该方法返回一个-1结束
-    while ((len=inp.read(bs))!=-1) {
-        out.write(bs);
-    }
-    //全部关闭
-    inp.close();
-    out.close();
-    socket.close();
-    } catch (IOException e) {
-        // TODO 自动生成的 catch 块
-        e.printStackTrace();
-    }
-}</code></pre><p>}<br>2.将原先的服务端socket改为<br>    // TODO 自动生成的方法存根<br>            ServerSocket server= new ServerSocket(9998);<br>            while (true) {<br>                Socket socket=server.accept();<br>                //將socket传入run线程  在将线程放入thread中使用start方法<br>                new Thread(new Run(socket)).start();<br>            }</p>
+    <h2 id="yml的使用及其他配置文件的基本使用"><a href="#yml的使用及其他配置文件的基本使用" class="headerlink" title="yml的使用及其他配置文件的基本使用"></a>yml的使用及其他配置文件的基本使用</h2><pre><code>yml一种比properties更简洁的标记语言，通过修改配置文件改springboot的配置  也可以存放数据
+SpringBoot使用一个全局的配置文件,配置文件名是固定的如下
+application.properties
+application.yml</code></pre><a id="more"></a>
+<p>1、基本语法<br>k:(空格)v :表示一对键值对(空格必须有) ;<br>以空格的缩进来控制层级关系;只要是左对齐的一列数据,都是同一个层级的<br>注意！  “/n”  不会转义  会换行  ‘’和 无  还是原样输出<br><strong>例：</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#修改端口</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="string">port:8080</span></span><br><span class="line"><span class="comment"># 存放数据</span></span><br><span class="line"><span class="attr">test:</span></span><br><span class="line"><span class="string">name:zhangsan</span></span><br><span class="line"><span class="string">age:15</span></span><br><span class="line"><span class="attr">list:</span></span><br><span class="line"><span class="string">-a</span></span><br><span class="line"><span class="string">-b</span></span><br><span class="line"><span class="string">hello:&#123;name1:bob,age1:22&#125;</span></span><br></pre></td></tr></table></figure>
+<p><em>占位符的使用</em><br>    生成随机数<br>    <strong>例：</strong><br>        <code>${random. value}、${random. int}、${ random. long}
+        ${random. int(10)}、${ random. int[1024, 65536]}</code><br>    设置默认值  没有该值原样输出  加：后输出后面默认值<br>        ${test: test}</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">list:</span></span><br><span class="line"><span class="string">-$&#123;random.int&#125;</span></span><br><span class="line"><span class="string">-a</span></span><br><span class="line"><span class="string">-b</span></span><br><span class="line"><span class="string">-$&#123;random.uuid&#125;</span></span><br><span class="line"><span class="string">-$&#123;test.aaa:bbb&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code>结果：list=[1653511025, a, b, 4e496fc3-1d6a-4b1e-b58b-01d51b2ee395, bbb]</code></pre><p><em>使用方法：</em><br>1、新建一个模型类  必须有set get方法  不然为null</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将其他组件（@ConfigurationProperties）加入容器中</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="comment">//将该类的属性与配置属性进行绑定 prefix = "对应的配置属性名" 一一映射</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"test"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"><span class="comment">// @Value("$&#123;test.name&#125;") 只能一个一个注入  适合简单少量的数据</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; list;</span><br><span class="line">    <span class="keyword">private</span> Hello hello;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">getList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setList</span><span class="params">(List&lt;String&gt; list)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.list = list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Hello <span class="title">getHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hello;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHello</span><span class="params">(Hello hello)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.hello = hello;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Test&#123;"</span> +</span><br><span class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", age="</span> + age +</span><br><span class="line">                <span class="string">", list="</span> + list +</span><br><span class="line">                <span class="string">", hello="</span> + hello +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、警告处理  配置完后重新运行一下</p>
+<!-- 配置文件处理器  可以给配置提示器-->
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;</code></pre><p>3、编写测试类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//让测试在Spring容器环境下执行。如测试类中无此注解，将导致service,dao等自动注入失败。</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">//标明该类是<span class="title">springboot</span>测试类</span></span><br><span class="line"><span class="class">@<span class="title">SpringBootTest</span></span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">HellobootApplicationTests</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	com.example.helloboot.controller.Test test;</span><br><span class="line">	Hello hello;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;<span class="comment">//点击运行</span></span><br><span class="line">		System.out.println(test+<span class="string">"--"</span>+hello);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)需要引入以下依赖</span></span><br><span class="line"><span class="class">	&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line"><span class="class">   			&lt;<span class="title">groupId</span>&gt;<span class="title">junit</span>&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line"><span class="class">  			&lt;<span class="title">artifactId</span>&gt;<span class="title">junit</span>&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line"><span class="class">   			&lt;<span class="title">version</span>&gt;4.10&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line"><span class="class">   			&lt;!--&lt;<span class="title">scope</span>&gt;<span class="title">test</span>&lt;/<span class="title">scope</span>&gt;--&gt;</span></span><br><span class="line"><span class="class">		&lt;/<span class="title">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>//加载指定的配置文件 仅支持.properties格式  value数组格式  支<br>持指定多个配置文件<br> @PropertySource(value = {“classpath iperson . properties”})</p>
+<p>#####官方推荐的设置配置类  不用去XML配bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*@Configuration:指明当前类是一个配置类: 就是来替代之前的*Spring配置文件</span></span><br><span class="line"><span class="comment">*在配置文件中用&lt;bean&gt;&lt;bean/&gt;标签添加组件中</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Confi</span> guration</span><br><span class="line"><span class="keyword">public</span> c1ass MyAppConfig &#123;</span><br><span class="line"><span class="comment">//将方法的返 回值添加到容器中:容器中这个组件默认的id就是方法名</span></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Test <span class="title">helloService</span><span class="params">()</span></span>&#123;</span><br><span class="line">		 System.out.println(<span class="string">"test1配置类"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span>  Test ();</span><br><span class="line">&#125;</span><br><span class="line">测试一下</span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">	ApplicationContext ioc;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span>  <span class="keyword">void</span>  <span class="title">ptest</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> test = ioc.containsBean(<span class="string">"helloService"</span>);</span><br><span class="line">		System.out.println(test);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
     
 
@@ -302,7 +278,7 @@ public void run() {
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2022/05/19/socket/" title="我的java博客" target="_blank">http://yoursite.com/2022/05/19/socket/</a>
+          <a href="http://yoursite.com/2020/01/19/yml的使用及其他配置文件的基本使用/" title="yml的使用及其他配置文件的基本使用" target="_blank">http://yoursite.com/2020/01/19/yml的使用及其他配置文件的基本使用/</a>
         </li>
         
         <li>
@@ -324,7 +300,11 @@ public void run() {
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">socket</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring boot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">yml</a>
         		</li>
       		
 		</ul>
@@ -336,7 +316,7 @@ public void run() {
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/java高级//" class="article-tag-list-link color2">java高级</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -391,7 +371,7 @@ public void run() {
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/05/19/socket/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/19/yml%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -406,9 +386,18 @@ public void run() {
 
 <nav id="article-nav">
   
+    <a href="/2020/01/19/hello%20springboot/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hello spring boot
+        
+      </div>
+    </a>
   
-    <a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的博客</div>
+  
+    <a href="/2019/07/19/socket/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的java博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -435,7 +424,7 @@ public void run() {
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#socket通信使用"><span class="toc-number">1.</span> <span class="toc-text">socket通信使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用步骤"><span class="toc-number">1.1.</span> <span class="toc-text">使用步骤</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#yml的使用及其他配置文件的基本使用"><span class="toc-number">1.</span> <span class="toc-text">yml的使用及其他配置文件的基本使用</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -596,6 +585,14 @@ public void run() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring boot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">yml</a>
               </li>
             
             <div class="clearfix"></div>

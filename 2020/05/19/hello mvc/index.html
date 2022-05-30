@@ -6,19 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | Hexo</title>
+  <title>hello mvc | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="第一次使用spring mvc步骤  建maven工程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hello mvc">
+<meta property="og:url" content="http://yoursite.com/2020/05/19/hello%20mvc/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第一次使用spring mvc步骤  建maven工程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-27T18:09:19.000Z">
-<meta property="article:modified_time" content="2022-05-27T18:09:45.682Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310215021.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310219086.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310219216.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310220886.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310221447.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310223465.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310223002.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310228119.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310228047.png">
+<meta property="article:published_time" content="2020-05-19T09:24:13.000Z">
+<meta property="article:modified_time" content="2022-05-30T20:07:02.588Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310215021.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -185,14 +198,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-hello mvc" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      tags
+      hello mvc
     </h1>
   
 
@@ -204,8 +217,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/tags/index.html" class="archive-article-date">
-        <time datetime="2022-05-27T18:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-28</time>
+<a href="/2020/05/19/hello%20mvc/" class="archive-article-date">
+        <time datetime="2020-05-19T09:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
 </a>
 
   
@@ -218,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">660字</span>
     </span>
   </span>
 
@@ -227,7 +240,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -238,7 +251,46 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <p>第一次使用spring mvc步骤</p>
+<ol>
+<li>建maven工程<a id="more"></a>
+ 略</li>
+<li>在pom文件导入 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>3.2.17.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+会自动下载mvc需要的依赖</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310215021.png"/>
+
+<p>3.添加web应用</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310219086.png"/>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310219216.png"/>
+
+<p>4.打开构造环境 添加lib目录加上jar包</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310220886.png"/>
+
+<p>5.配置web</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--注册servlet--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springDispatcherServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--初始化参数指定springmvc配置文件的路径，进行关联--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:springmvc.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--启动顺序第一--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--请求拦截/为除静态资源以外全部拦截/*是全部拦截--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springDispatcherServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>6.建配置文件</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310221447.png"/>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beansxmlns="http:</span>//<span class="attr">www.springframework.org</span>/<span class="attr">schema</span>/<span class="attr">beans</span>"</span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:p</span>=<span class="string">"http://www.springframework.org/schema/p"</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:mvc</span>=<span class="string">"http://www.springframework.org/schema/mvc"</span></span></span><br><span class="line"><span class="tag"><span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/mvc</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/context/spring-context.xsd"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--扫描器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scanbase-package="com.hello"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--让mvc不处理静态资源  交给原始框架处理tamcat--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mvc:default-servlet-handler</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--支持mvc注解驱动--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mvc:annotation-driven</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--视图解析器(InternalResourceViewResolver)--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beanclass="org.springframework.web.servlet.view.InternalResourceViewResolver"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">propertyname="prefix"value="</span>/<span class="attr">WEB-INF</span>/<span class="attr">jsp</span>/"&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">propertyname="suffix"value=".jsp"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>7.建控制类 C</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//说明该类是配置类</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line">publicclasshello&#123;</span><br><span class="line"><span class="comment">//注解映射</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</span><br><span class="line">publicStringhello()&#123;</span><br><span class="line">System.out.println(<span class="string">"1111111111111111111"</span>);</span><br><span class="line"><span class="comment">//字符串拼接在浏览器中被拼接成/WEB-INF/jsp/hello.jsp</span></span><br><span class="line"><span class="keyword">return</span><span class="string">"hello"</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>8.建视图页面 V</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310223465.png"/>
+
+<p><strong><em>提示！</em></strong><br>/WEB-INF目录（隐藏）客户端不能直接访问 但服务端可以<br>    保证了视图安全</p>
+<p>关键步骤：</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310223002.png"/>
+
+<h2 id="过程可能遇到的问题"><a href="#过程可能遇到的问题" class="headerlink" title="过程可能遇到的问题"></a>过程可能遇到的问题</h2><p>1、tamcat路径问题见（链接）</p>
+<p>2、架包问题   500问题 什么类没有注入容器   如test类不在bean内 也可能是没加包到lib<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310228119.png"/><br>解决方法 检查构造环境  见第四步</p>
+<p>3、没有映射</p>
+<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202205310228047.png"/>
+
+<p>检查路径  和注解的包是否正确</p>
+<p>4、tamcat无法启动<br>因为第四步lib目录加上jar包有不同版本重复的mvcjar包<br>原因是父工程和子工程pom依赖mvc包版本不一致而且重复</p>
+
     
 
     
@@ -252,7 +304,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/tags/index.html" title="tags" target="_blank">http://yoursite.com/tags/index.html</a>
+          <a href="http://yoursite.com/2020/05/19/hello mvc/" title="hello mvc" target="_blank">http://yoursite.com/2020/05/19/hello mvc/</a>
         </li>
         
         <li>
@@ -269,7 +321,29 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring MVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
 
@@ -319,7 +393,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/19/hello%20mvc/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -331,6 +405,25 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          我的博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/19/SSM%E6%95%B4%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SSM整合</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -353,7 +446,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#过程可能遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">过程可能遇到的问题</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -413,7 +506,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
