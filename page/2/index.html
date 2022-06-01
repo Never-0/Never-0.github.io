@@ -542,10 +542,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="记录关于栈常考的题"><a href="#记录关于栈常考的题" class="headerlink" title="记录关于栈常考的题"></a>记录关于栈常考的题</h3><p>栈（先进后出）<br>    1.不可能的出栈顺序<br>        有一道题目：一个栈的输入顺序是ABCDEF，那么不可能出现的出栈顺序是什么（）<br>        A、DCBAEF<br>        B、ACBEDF<br>        C、DEFBCA<br>        D、CDBAFE<br>        这道题的答案是C。</p>
-<p>&emsp;&emsp;类似的题如果只是ABC三个字母，我们还可以列举一下所有的可能，可是如果字母多了，像是这道题一样，我们把所有的可能都列出来，成本就太高了。所以我们要从中找到规律。<br>&emsp;&emsp;首先我们看一下A选项，第一个出栈的是D，那么就说明ABC按顺序的排在栈中，，那么ABC的出栈顺序一定是CBA这样的，中间有可能夹杂着EF，比如说CEFBA、CEBAF等等，但是不可能出现CA…、BC…，<strong>因为ABC的相对顺序顺序早在D出栈的时候就一定排列好了。</strong><br>&emsp;&emsp;我们来分析一下C选项，首先出栈的是D，接着是EF，但是接下来出现的BCA就是错误的，因为当D出栈的时候，就一定决定了ABC相对的的出栈顺序（CBA），所以不可能出现BCA的情况。</p>
-<p>那么咱们通用的结论是什么呢？<br>&emsp;&emsp;我们可以把出栈的顺序分成一步一步来看，<strong>如果一个元素之前的元素还没有出栈，而这个元素先出栈，那么他之前的元素一定是按照相对顺序出栈的。</strong></p>
-
+    <h3 id="记录关于栈常考的题"><a href="#记录关于栈常考的题" class="headerlink" title="记录关于栈常考的题"></a>记录关于栈常考的题</h3>
+    
+    <a class="article-more-a" href="/2020/01/19/%E4%B8%8D%E5%8F%AF%E8%83%BD%E7%9A%84%E5%87%BA%E6%A0%88%E9%A1%BA%E5%BA%8F/#more">more >></a>
+    
     
 
     

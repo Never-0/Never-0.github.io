@@ -196,6 +196,85 @@
             
 
   
+    <article id="post-我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" target="_blank">我的博客</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+        <time datetime="2020-05-23T15:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="1-发现错误-先考虑自己的代码错误-（初学）不要质疑软件系统问题"><a href="#1-发现错误-先考虑自己的代码错误-（初学）不要质疑软件系统问题" class="headerlink" title="1.发现错误  先考虑自己的代码错误  （初学）不要质疑软件系统问题"></a>1.发现错误  先考虑自己的代码错误  （初学）不要质疑软件系统问题</h1><h1 id="2-没有得到想要的输出-先考虑逻辑算法问题-再考虑语法问题"><a href="#2-没有得到想要的输出-先考虑逻辑算法问题-再考虑语法问题" class="headerlink" title="2.没有得到想要的输出  先考虑逻辑算法问题   再考虑语法问题"></a>2.没有得到想要的输出  先考虑逻辑算法问题   再考虑语法问题</h1><h1 id="3-没有效果-重启一下（特别是复制粘贴-和maven）"><a href="#3-没有效果-重启一下（特别是复制粘贴-和maven）" class="headerlink" title="3.没有效果  重启一下（特别是复制粘贴  和maven）"></a>3.没有效果  重启一下（特别是复制粘贴  和maven）</h1>
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-springboot结合redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -225,35 +304,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>1.导入依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--    redis--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--&lt;version&gt;2.1.4.RELEASE&lt;/version&gt;--&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-pool2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>2.修改配置文件<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020235632.png"/></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 是否启动日志SQL语句</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Redis 数据库索引（默认为 0）</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">database:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">192.168</span><span class="number">.37</span><span class="number">.133</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">      <span class="comment"># Redis 服务器连接密码（默认为空）</span></span><br><span class="line">    <span class="attr">password:</span></span><br><span class="line">      <span class="comment"># springboot 2.0 redis默认客户端已换成lettuce</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 连接池最大连接数（使用负值表示没有限制） 默认 8</span></span><br><span class="line">    <span class="attr">lettuce.pool.max-active:</span> <span class="number">8</span></span><br><span class="line">      <span class="comment"># 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1</span></span><br><span class="line">    <span class="attr">lettuce.pool.max-wait:</span> <span class="number">-1</span></span><br><span class="line">        <span class="comment"># 连接池中的最大空闲连接 默认 8</span></span><br><span class="line">    <span class="attr">lettuce.pool.max-idle:</span> <span class="number">8</span></span><br><span class="line">        <span class="comment"># 连接池中的最小空闲连接 默认 0</span></span><br><span class="line">    <span class="attr">lettuce.pool.min-idle:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">timeout:</span> <span class="number">5000</span></span><br></pre></td></tr></table></figure>
-<p>3.建配置类（自定义序列化，用于去除特殊字符）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationpublicclassRedisConfig</span>&#123;</span><br><span class="line">    <span class="meta">@BeanpublicRedisTemplate</span>&lt;String, Object&gt; redisTemplate(RedisConnectionFactory factory)&#123;</span><br><span class="line">        RedisTemplate&lt;String, Object&gt; template = newRedisTemplate();</span><br><span class="line">        template.setConnectionFactory(factory);</span><br><span class="line">        Jackson2JsonRedisSerializerjackson2JsonRedisSerializer=newJackson2JsonRedisSerializer(Object<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        ObjectMapperom=newObjectMapper();</span><br><span class="line">        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);</span><br><span class="line">        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);</span><br><span class="line">        jackson2JsonRedisSerializer.setObjectMapper(om);</span><br><span class="line">        StringRedisSerializerstringRedisSerializer=newStringRedisSerializer();</span><br><span class="line">        <span class="comment">// key采用String的序列化方式template.setKeySerializer(stringRedisSerializer);</span></span><br><span class="line">        <span class="comment">// hash的key也采用String的序列化方式template.setHashKeySerializer(stringRedisSerializer);</span></span><br><span class="line">        <span class="comment">// value序列化方式采用jacksontemplate.setValueSerializer(jackson2JsonRedisSerializer);</span></span><br><span class="line">        <span class="comment">// hash的value序列化方式采用jacksontemplate.setHashValueSerializer(jackson2JsonRedisSerializer);</span></span><br><span class="line">        template.afterPropertiesSet();</span><br><span class="line">        returntemplate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>4.测试</p>
-<pre><code class="java"><span class="meta">@RestController</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisController</span> </span>{
-    <span class="meta">@Autowired</span>
-    <span class="keyword">private</span> RedisTemplate redisTemplate;
-
-    <span class="meta">@GetMapping</span>(<span class="string">"redis"</span>)
-    <span class="function"><span class="keyword">public</span> String <span class="title">testRedis</span><span class="params">()</span></span>{
-        redisTemplate.opsForValue().set(<span class="string">"name"</span>,<span class="string">"zhangsan"</span>);
-        String name= (String) redisTemplate.opsForValue().get(<span class="string">"name"</span>);
-        <span class="keyword">return</span> name;
-    }
-}</code></pre>
-<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020235500.png"/>
-
-<p><strong>补充</strong><br>（参考来自 <a href="https://segmentfault.com/a/1190000018883478" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018883478</a> ）<br>    写入对象需要实现Serializable接口</p>
-<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020235097.png"/>
-
-
-
-
+    <p>1.导入依赖</p>
+    
+    <a class="article-more-a" href="/2021/01/19/springboot%E7%BB%93%E5%90%88redis/#more">more >></a>
+    
     
 
     
@@ -349,15 +403,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020149191.png"/>
-
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020149508.png"/>
-
-<p>位置参数变量（类似Java传参）<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020151155.png"/><br>    测试<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020152211.png"/><br>    结果<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020152194.png"/></p>
-<p>预定义变量<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020152744.png"/></p>
-<p>运算符（更多）<br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020153823.png"/></p>
-
+    <p>shell 是操作系统的最外层。shell 合并编程语言以控制进程和文件，以及启动和控制其它程序。shell 通过提示您输入，向操作系统解释该输入，然后处理来自操作系统的任何结果输出来管理您与操作系统之间的交互。</p>
+    
+    <a class="article-more-a" href="/2020/09/19/shell%E7%BC%96%E7%A8%8B/#more">more >></a>
+    
     
 
     
@@ -395,80 +444,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/09/19/shell%E7%BC%96%E7%A8%8B/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" target="_blank">我的博客</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-        <time datetime="2020-05-23T15:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="1-发现错误-先考虑自己的代码错误-（初学）不要质疑软件系统问题"><a href="#1-发现错误-先考虑自己的代码错误-（初学）不要质疑软件系统问题" class="headerlink" title="1.发现错误  先考虑自己的代码错误  （初学）不要质疑软件系统问题"></a>1.发现错误  先考虑自己的代码错误  （初学）不要质疑软件系统问题</h1><h1 id="2-没有得到想要的输出-先考虑逻辑算法问题-再考虑语法问题"><a href="#2-没有得到想要的输出-先考虑逻辑算法问题-再考虑语法问题" class="headerlink" title="2.没有得到想要的输出  先考虑逻辑算法问题   再考虑语法问题"></a>2.没有得到想要的输出  先考虑逻辑算法问题   再考虑语法问题</h1><h1 id="3-没有效果-重启一下（特别是复制粘贴-和maven）"><a href="#3-没有效果-重启一下（特别是复制粘贴-和maven）" class="headerlink" title="3.没有效果  重启一下（特别是复制粘贴  和maven）"></a>3.没有效果  重启一下（特别是复制粘贴  和maven）</h1>
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/23/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
     </p>
     
 
@@ -1007,35 +982,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020322717.png"/>
-
-<img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020322402.png"/>
-一，区别
-    OSI七层模型为网络的标准层次划分，未得到市场认可。
-    非国际标准TCP/IP四层模型，得到了市场的广泛认可，可用看做事实的国际标准
-    为了描述方便，一般将OSI参考模型和TCP/IP模型结合起来，采用原理五层模型
-二，各层功能定义
-    应用层：OSI中最靠近用户的一层，是为计算机用户提供应用接口，也为用户直接提供各种
-网络服务。
-    表示层：表示层提供各种用于数据层的编码和转换功能，确保一个系统的应用层发送的数据
-可以被另一个系统的应用层识识别。同时也可以进行加解密，压缩解压缩。
-    会话层：不同机器上的用户之间建立和管理会话。该层的通信由不同设备的应用程序之间的
-服务请求和响应组成。
-    传输层：传输层建立了主机端到端的连接，传输层的作用是为上层协议提供端到端的可靠和
-透明数据传输服务，包括处理差错和流量控制等问题。TCP UDP就在这一层
-    网络层：这一层是通过IP寻址来建立两个节点之间的连接，为源端的传输层送来的分组，选
-择合适的路由和交换节点，正确无误的按照地址送给目的端的传输层，也就是常说的IP层.
-    数据链路层：物理寻址，同时将原始比特流转换为逻辑传输线路层
-    物理层：最终的信号的传输都是通过物理层来实现的。通过物理介质传输比特流。创建的设
-备有：集线器，中继器，双绞线，同轴电缆等
-
-<p><strong>原理体系模型各层数据传递的单位及通讯路线图</strong><br><img src="https://raw.githubusercontent.com/Never-0/ImgURL/main/202206020322201.png"/></p>
-<p>常使用的各层协议如下：</p>
-<blockquote>
-<p>物理层：RJ45、CLOCK、IEEE802.3    （中继器，集线器，网关）<br>    数据链路：PPP、FR、HDLC、VLAN、MAC  （网桥，交换机）<br>    网络层：IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP、 （路<br>由器）<br>    传输层：TCP、UDP、SPX<br>    会话层：NFS、SQL、NETBIOS、RPC<br>    表示层：JPEG、MPEG、ASII<br>    应用层：FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS</p>
-</blockquote>
-
+    <p>计算机网络协议分层结构从网络通信原理角度可以把网络分层<br>
+    
+    <a class="article-more-a" href="/2020/01/19/%E8%AE%A1%E7%BD%91%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84/#more">more >></a>
+    
     
 
     
@@ -1114,7 +1064,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/01/19/%E8%AE%A1%E7%BD%91IP/" target="_blank">分层结构</a>
+	  <a class="article-title" href="/2020/01/19/%E8%AE%A1%E7%BD%91IP/" target="_blank">IP协议</a>
   
     </h1>
   
